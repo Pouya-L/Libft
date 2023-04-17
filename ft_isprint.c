@@ -6,18 +6,18 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 16:22:43 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/17 14:36:03 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:12:54 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint (int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c < 127)
-    return (1);
-    else
-    return (0);
+	if (c >= 32 && c < 127)
+		return (1);
+	else
+		return (0);
 }
 
 /*#include <stdio.h>

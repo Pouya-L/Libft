@@ -6,7 +6,7 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 15:20:34 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/14 20:52:41 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:08:40 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,32 +16,30 @@ because it checks and arranges the order correctly */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char* desti;
-	const unsigned char* srci;
-	size_t i;
+	unsigned char		*desti;
+	const unsigned char	*srci;
+	size_t				i;
 
 	desti = dest;
 	srci = src;
 	if (dest == src)
-	return (dest);
+		return (dest);
 	else if (desti < srci)
 	{
 		i = 0;
-		while (i < n)
+		while (i++ < n)
 		{
-			desti[i] = srci[i];
-			i++;
+			desti[i - 1] = srci[i - 1];
 		}
 	}
 	else if (desti > srci)
 	{
 		i = n;
-		while (i > 0)
+		while (i-- > 0)
 		{
-			desti[i - 1] = srci[i - 1];
-			i--;
+			desti[i] = srci[i];
 		}
 	}
 	return (dest);

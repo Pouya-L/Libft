@@ -6,13 +6,13 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 18:55:30 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/17 14:20:16 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:13:18 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
@@ -26,4 +26,4 @@ int main (void)
 	bzero(str + 27, 8);
 	printf ("the new string is %s\n", str);
 	return (0);
-}*/
+m}*/

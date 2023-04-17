@@ -6,7 +6,7 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:23:19 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/14 20:52:34 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:21:27 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 /*not sure if needed = if (ptr == NULL) { return NULL; }*/
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char*	ptr;
-	size_t	i;
+	unsigned char	*ptr;
+	size_t			i;
 
 	ptr = s;
 	i = 0;
