@@ -6,15 +6,17 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:35:51 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/12 16:23:18 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/14 18:29:59 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_isalnum(int c)
 {
     if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <='9'))
     return (1);
-    else 
+    else
     return (0);
 }
 
@@ -27,8 +29,8 @@ int main (void)
     scanf("%c", &input);
     if (ft_isalnum(input) == 1)
     printf ("Yeah\n");
-    else 
-    printf("Nah\n"); 
+    else
+    printf("Nah\n");
 
     return(0);
 }*/

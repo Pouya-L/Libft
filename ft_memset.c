@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 17:02:16 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/14 18:29:59 by plashkar         ###   ########.fr       */
+/*   Created: 2023/04/13 16:23:19 by plashkar          #+#    #+#             */
+/*   Updated: 2023/04/14 20:52:34 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*memset - fill memory with a constant byte*/
+/*not sure if needed = if (ptr == NULL) { return NULL; }*/
 #include "libft.h"
 
-int ft_tolower(int c)
+void *ft_memset(void *s, int c, size_t n)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+	unsigned char*	ptr;
+	size_t	i;
+
+	ptr = s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = (unsigned char)c;
+		i++;
+	}
+	return (s);
 }
 
 /*#include <stdio.h>
+
 int main (void)
 {
-    char input;
-    printf ("Enter your letter: ");
-    scanf ("%c", &input);
-    printf ("%c", ft_tolower(input));
-    printf ("\n");
-    return (0);
+	char str[] = "This is probabaly gonna be censored";
+	printf ("the original string is: %s", str);
+	printf ("\n");
+	ft_memset(str + 27, 161, 8);
+	printf ("the new string is %s\n", str);
+	return (0);
 }*/

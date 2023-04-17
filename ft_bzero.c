@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 13:42:20 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/14 18:29:59 by plashkar         ###   ########.fr       */
+/*   Created: 2023/04/14 18:55:30 by plashkar          #+#    #+#             */
+/*   Updated: 2023/04/17 14:20:16 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+void ft_bzero(void *s, size_t n)
 {
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-    return (1);
-    else
-    return (0);
+	ft_memset(s, 0, n);
 }
 
 /*#include <stdio.h>
-int main()
+int main (void)
 {
-    char input;
-    printf("Enter a character: ");
-    scanf("%c", &input);
-
-    if (ft_isalpha(input))
-        printf("%c is an alphabetic character.\n", input);
-    else
-        printf("%c is not an alphabetic character.\n", input);
-
-    return 0;
+	char str[] = "This is probabaly gonna be censored";
+	printf ("the original string is: %s", str);
+	printf ("\n");
+	bzero(str + 27, 8);
+	printf ("the new string is %s\n", str);
+	return (0);
 }*/

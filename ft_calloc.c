@@ -1,36 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 13:42:20 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/14 18:29:59 by plashkar         ###   ########.fr       */
+/*   Created: 2023/04/17 16:20:39 by plashkar          #+#    #+#             */
+/*   Updated: 2023/04/17 16:22:23 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
-{
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-    return (1);
-    else
-    return (0);
-}
-
-/*#include <stdio.h>
-int main()
-{
-    char input;
-    printf("Enter a character: ");
-    scanf("%c", &input);
-
-    if (ft_isalpha(input))
-        printf("%c is an alphabetic character.\n", input);
-    else
-        printf("%c is not an alphabetic character.\n", input);
-
-    return 0;
-}*/
+//void *ft_calloc(size_t mbmb, size_t size)
