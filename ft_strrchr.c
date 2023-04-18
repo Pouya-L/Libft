@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 18:15:29 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/18 21:31:56 by plashkar         ###   ########.fr       */
+/*   Created: 2023/04/18 20:36:03 by plashkar          #+#    #+#             */
+/*   Updated: 2023/04/18 21:42:38 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-int main (void)
+char	*ft_strrchr(const char *s, int c)
+{
+	unsigned char	c1;
+	size_t			len;
+
+	len = ft_strlen(s);
+	c1 = c;
+	while (len > 0)
+	{
+		if (s[len - 1] == c1)
+			return ((char *)(s + len - 1));
+		len--;
+	}
+	if (c1 == '\0')
+		return ((char *)&s[ft_strlen(s)]);
+	return (NULL);
+}
+
+/*int main (void)
 {
 	char *res;
 	char *res2;
@@ -24,4 +40,4 @@ int main (void)
 	printf ("My ft: %s\n", res);
 	printf ("OG ft: %s\n", res2);
 	return(0);
-}
+}*/
