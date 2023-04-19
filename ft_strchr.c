@@ -6,7 +6,7 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 16:11:35 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/18 21:06:18 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:01:03 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main (void)
 	i = 0;
 	if (c == '\0')
 		return((char *)&str[ft_strlen(str)]);
-	while (str[i] != '\0' && str[i] != c)
+	while (str[i] != '\0' && str[i] !=
 	i++;
 	if (str[i] == '\0')
 		return (NULL);
