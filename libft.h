@@ -6,7 +6,7 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 19:05:26 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/19 16:16:03 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/20 19:21:15 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+
+//Part 1 - Libc functions
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -38,7 +40,14 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strdup(const char *s);
 
 void	*ft_calloc(size_t mbmb, size_t size);
+
+//Part 2 - Additional functions
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif

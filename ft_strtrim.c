@@ -1,15 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NOTDONEft_strnstr.c                                :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/18 21:36:49 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/18 21:43:17 by plashkar         ###   ########.fr       */
+/*   Created: 2023/04/20 19:09:27 by plashkar          #+#    #+#             */
+/*   Updated: 2023/04/20 19:21:25 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+char	*ft_strtrim(char const *s1, char const *set)
+{
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+}
+
+int	main(void)
+{
+	char s1[] = "Wait till Biggus Dickus hears of this! -Pontius Pilate"
+
+}
