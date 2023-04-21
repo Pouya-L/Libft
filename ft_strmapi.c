@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 18:15:29 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/21 19:49:55 by plashkar         ###   ########.fr       */
+/*   Created: 2023/04/21 18:54:46 by plashkar          #+#    #+#             */
+/*   Updated: 2023/04/21 19:45:36 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-int	main (void)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		num;
-	char	*strnum;
-	printf("what is your number?\n");
-	scanf("%d", &num);
-	strnum = ft_itoa(num);
-	printf("The string is: %s\n", strnum);
-	return (0);
+	char			*str;
+	unsigned int	i;
+
+	i = 0;
+	if (s == NULL || f == NULL)
+		return (0);
+	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
