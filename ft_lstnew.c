@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 18:15:29 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/26 12:08:37 by plashkar         ###   ########.fr       */
+/*   Created: 2023/04/26 15:57:22 by plashkar          #+#    #+#             */
+/*   Updated: 2023/04/26 17:38:52 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 #include <stdio.h>
 
-int	main (void)
+t_list	*ft_lstnew(void *content)
 {
-		ft_putnbr_fd(5, 2);
-	write (1, "\n", 1);
-		ft_putnbr_fd(-7, 2);
-	write (1, "\n", 1);
-		ft_putnbr_fd(0, 2);
-	write (1, "\n", 1);
-		ft_putnbr_fd(2147483647, 2);
-	write (1, "\n", 1);
-		ft_putnbr_fd(-2147483648, 2);
-	write (1, "\n", 1);
-		ft_putnbr_fd(-2147483648LL, 2);
-	write (1, "\n", 1);
-		ft_putnbr_fd(-21, 2);
-	write (1, "\n", 1);
-		ft_putnbr_fd(798, 2);
-	write (1, "\n", 1);
+	t_list	*node;
+
+	node = malloc(sizeof(*node));
+	if (!node)
+		return (NULL);
+	node -> next = NULL;
+	node -> content = content;
+	return (node);
 }
+
+/*int	main(void)
+{
+	int		*data;
+	t_list	*node;
+
+	data = malloc(sizeof(*data));
+	if (!data)
+		return (0);
+	*data = 69;
+	node = ft_lstnew(data);
+	printf("The content in node is = %d\n", *(int *)(node -> content));
+	free (node);
+	free (data);
+	return (0);
+}*/

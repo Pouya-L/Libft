@@ -6,7 +6,7 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 15:57:16 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/24 16:52:57 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:40:35 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
-
 
 /*int main(void)
 {
