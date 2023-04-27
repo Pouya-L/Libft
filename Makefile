@@ -6,7 +6,7 @@
 #    By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 17:00:19 by plashkar          #+#    #+#              #
-#    Updated: 2023/04/26 17:05:03 by plashkar         ###   ########.fr        #
+#    Updated: 2023/04/27 16:23:33 by plashkar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRC = \
 	ft_toupper.c \
 
 BSRC = \
-	ft_lstnew.c
+	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+	ft_lstdelone.c ft_lstclear.c
 
 OBJ = $(SRC:.c=.o)
 BOBJS = $(BSRC:.c=.o)
