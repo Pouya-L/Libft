@@ -6,7 +6,7 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 14:38:36 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/27 17:29:53 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/05/01 13:30:29 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 		free(lst);
 	}
 }
-
-
 
 /*int main(void)
 {
