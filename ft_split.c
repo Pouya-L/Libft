@@ -6,12 +6,11 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 17:34:00 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/26 17:29:49 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:20:40 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	wordcnt(const char *s, char delimit)
 {
@@ -44,6 +43,20 @@ int	lettercnt(const char *s, char delimit, int i)
 	return (ltcnt + 1);
 }
 
+char	**freecntsubstr(char **substring)
+{
+	int	i;
+
+	i = 0;
+	while (substring[i] != NULL)
+	{
+		free(substring[i]);
+		i++;
+	}
+	free(substring);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -63,6 +76,8 @@ char	**ft_split(char const *s, char c)
 			continue ;
 		}
 		result[a] = ft_substr(s, start, lettercnt(s, c, start));
+		if (result[a] == NULL)
+			return (freecntsubstr(result));
 		start = start + lettercnt(s, c, start);
 		a++;
 	}

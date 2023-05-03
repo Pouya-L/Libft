@@ -6,7 +6,7 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 16:06:57 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/20 18:58:02 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:43:27 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substring;
 	size_t	i;
 
+	if (s == NULL)
+		return (0);
 	if (start >= ft_strlen(s))
 	{
-		substring = malloc(1);
-		*substring = '\0';
+		substring = ft_strdup("");
 		return (substring);
 	}
 	i = 0;

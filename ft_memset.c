@@ -6,12 +6,11 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:23:19 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/17 18:21:27 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:30:05 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*memset - fill memory with a constant byte*/
-/*not sure if needed = if (ptr == NULL) { return NULL; }*/
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)

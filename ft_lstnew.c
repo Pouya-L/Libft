@@ -6,12 +6,11 @@
 /*   By: plashkar <plashkar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:57:22 by plashkar          #+#    #+#             */
-/*   Updated: 2023/04/27 12:06:02 by plashkar         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:19:53 by plashkar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
